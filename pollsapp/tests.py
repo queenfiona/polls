@@ -68,6 +68,7 @@ class QuestionIndexViewTests(TestCase):
         create_question(question_text="Future question.", days=30)
         response = self.client.get(reverse('pollsapp:index'))
         self.assertQuerysetEqual(
+
             response.context['latest_question_list'],
             ['<Question: Past question.>']
         )
@@ -81,3 +82,22 @@ class QuestionIndexViewTests(TestCase):
             response.context['latest_question_list'],
             ['<Question: Past question 2.>', '<Question: Past question 1.>']
         )
+
+
+class QuestionDetailViewTests(object):
+    """docstring for QuestionDetailViewTests."""
+
+    def test_future_question(self):
+        """Return 404 if pub-date is in the future."""
+        future_question = create_question(
+            question_text='Future question.', days=30)
+        url = reverse("pollsapp:detail", args=(future_question.id,))
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 404)
+
+    def test_past_question(self):
+        """Question text should be displayed."""
+        past_question = create_question(question_text='Past question', days=-5)
+        url = reverse("pollsapp:detail", args=(past_question.id))
+        response = self.client.get(url)
+        self.assertContains(response, past_question.question_text)
