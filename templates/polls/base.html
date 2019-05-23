@@ -4,6 +4,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{% block title %}{% endblock %}</title>
+	{% load static%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <!-- {% block stylesheet %}{% endblock %} -->
 </head>
 <body>
 	{% block content%}{% endblock %}
