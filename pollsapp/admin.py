@@ -6,7 +6,12 @@ from .models import Question, Choice
 class QuestionAdmin(admin.ModelAdmin):
     """docstring for QuestionAdmin."""
 
-    fields = ['pub_date', 'question_text']
+    # The first element of each tuple in fieldsets is the title of the fieldset
+    fieldsets = [
+        (None, {'fields': ['question_text']}),
+        ('Date information', {'fields': ['pub_date']}),
+
+    ]
 
 
 admin.site.register(Question, QuestionAdmin)
