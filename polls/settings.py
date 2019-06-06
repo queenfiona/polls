@@ -81,8 +81,8 @@ WSGI_APPLICATION = 'polls.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.getenv("DATABASE_URL")),
 }
-prod_db = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
+production_db = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(production_db)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -133,3 +133,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+LOGIN_REDIRECT_URL = '/polls/'

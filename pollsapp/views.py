@@ -1,9 +1,11 @@
 """pollsapp views."""
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
+from django.conf import settings
+from django.contrib.auth import authenticate, login
 from .models import Question, Choice
 
 
@@ -47,3 +49,15 @@ def vote(request, question_id):
         selected_choice.save()
         return HttpResponseRedirect(reverse('pollsapp:results',
                                             args=(question.id,)))
+
+
+def login_view(request):
+    """Authenticate users and attach them to current session."""
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        login(request, user)
+        return HttpResponseRedirect(reverse('pollsapp:index'))
+    else:
+        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
