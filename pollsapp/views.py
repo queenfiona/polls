@@ -9,10 +9,15 @@ from django.contrib.auth import authenticate, login
 from .models import Question, Choice
 
 
-class IndexView(generic.ListView):
+def index(request):
+    """Docstring for landing page."""
+    return render(request, 'polls/index.html', {})
+
+
+class LatestQuestionView(generic.ListView):
     """docstring for IndexView."""
 
-    template_name = 'polls/index.html'
+    template_name = 'polls/question.html'
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):

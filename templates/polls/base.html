@@ -4,13 +4,27 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{% block title %}{% endblock %}</title>
-	{% load static%}
+	{% load static %}
     <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
 </head>
 <body>
-	<header></header>
+	<header>
+		<div class="container">
+			<div id="branding">
+				<h1>Polls Application</h1>		
+			</div>
+			<nav>
+				<ul>
+					<li><a href="{% url 'pollsapp:index' %}">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="{% url 'login' %}">Login</a></li>
+				</ul>
+			</nav>
+			
+		</div>
+	</header>
 	{% block content%}{% endblock %}
-	<footer></footer>
+	<footer>Polls Application, Copyright &copy,2019</footer>
 
 </body>
 </html>
