@@ -9,9 +9,10 @@ from django.contrib.auth import authenticate, login
 from .models import Question, Choice
 
 
-def index(request):
-    """Docstring for landing page."""
-    return render(request, 'polls/index.html', {})
+class IndexView(generic.TemplateView):
+    """docstring for IndexView."""
+
+    template_name = 'polls/index.html'
 
 
 class LatestQuestionView(generic.ListView):
