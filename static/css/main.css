@@ -178,4 +178,37 @@ footer {
 	margin-top: 30px;
 }
 
+/*Media Queries*/
+@media(max-width: 758px){
+	header #branding,
+	header nav,
+	header nav li,
+	#specific_poll h1,
+	#specific_poll form,
+	#boxes .box,
+	article.main-col,
+	aside.sidebar{
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	header{
+		padding-bottom: 20px;
+	}
+
+	#showcase h1{
+		margin-top: 40px;
+	}
+
+	#specific_poll button, .quote button{
+		display: block;
+		width: 100%;
+	}
+
+	#specific_poll form input[type="text"], .quote textarea, .quote input{
+		width: 100%;
+		margin-bottom: 5px;
+	}
+}
 
