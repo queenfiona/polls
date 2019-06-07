@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#35424a">
 	<title>{% block title %}{% endblock %}</title>	
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 </head>
@@ -16,6 +17,7 @@
 			<nav>
 				<ul>
 					<li class="current"><a href="{% url 'pollsapp:index' %}">Home</a></li>
+					<li><a href="#">Services</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="{% url 'login' %}">Login</a></li>
 				</ul>

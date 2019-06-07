@@ -32,21 +32,21 @@
 <section id="boxes">
 	<div class="container">
 		<div class="box">
-			<img src="{% static 'image/logo_html.png' %}">
-			<h3>Select Poll Question</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			
-		</div>
-		<div class="box">
-			<img src="{% static 'image/logo_css.png' %}">
+			<img src="{% static 'image/logo_html.png' %}" alt="Click Poll Question">
 			<h3>Click Poll Question</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua.</p>
 			
 		</div>
 		<div class="box">
-			<img src="{% static 'image/logo_brush.png' %}">
+			<img src="{% static 'image/logo_css.png' %}" alt="Select Choice">
+			<h3>Select Choice</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+			
+		</div>
+		<div class="box">
+			<img src="{% static 'image/logo_brush.png' %}" alt="Vote">
 			<h3>Vote!</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -55,4 +55,86 @@
 	</div>
 	
 </section>
+
+<section id="about">
+	<div class="container">
+		<article class="main-col">
+			<h1 class="page-title">About Us</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. </p>
+			<p class="dark">Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			
+		</article>	
+
+		<aside class="sidebar">
+			<div class="dark">
+				<h3>What we do</h3>
+				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+				</p>
+			</div>			
+		</aside>	
+		
+	</div>	
+
+</section>
+
+</section id='service'>
+	<div class="container">
+		<article class="main-col">
+			<h1 class="page-title">Services</h1>
+			<ul id="services">
+				<li>
+					<h3>Website Design</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Pricing: $1000 - $3000</p>
+				</li>
+				<li>
+					<h3>Website Maintenance</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Pricing: $250 per month</p>
+				</li>
+				<li>
+					<h3>Website Hosting</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Pricing: $1000 - $3000</p>
+				</li>
+				
+			</ul>
+			
+		</article>
+
+		<aside class="sidebar" >
+			<div class="dark">
+				<h1>Get a Quote </h1>
+				<form class="quote">
+					<div>
+						<label for="name">Name</label><br>
+						<input type="text" name="name" placeholder="Name">					
+					</div>
+					<div>
+						<label for="email">Email</label><br>
+						<input type="email" name="email" placeholder="Email Address">
+					</div>
+					<div>
+						<label for="message">Message</label><br>
+						<textarea placeholder="Message" name="message"></textarea>
+					</div>
+					<button class="btn_1" type="submit">Send</button>
+					
+				</form>
+				
+			</div>
+			
+		</aside>		
+	</div>
+
+<section>
+	
 {% endblock%}
