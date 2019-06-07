@@ -92,6 +92,8 @@ header a:hover{
 	font-size: 20px;
 }
 
+/* Specific poll form*/
+
 #specific_poll{
 	padding: 5px;
 	color: #ffffff;
@@ -113,3 +115,22 @@ header a:hover{
 	width: 250px;
 	border-radius: 50px;	
 }
+
+/*Boxes*/
+#boxes {
+	margin-top: 20px;
+
+}
+
+#boxes .box{
+	float: left;
+	text-align: center;
+	width: 30%;
+	padding: 10px;
+}
+
+#boxes .box img{
+	width: 90px;
+}
+
+/*Footer*/
