@@ -11,16 +11,15 @@
 	<header>
 		<div class="container">
 			<div id="branding">
-				<h1>Polls Application</h1>		
+				<h1><span class="highlight">Polls</span> Application</h1>		
 			</div>
 			<nav>
 				<ul>
-					<li><a href="{% url 'pollsapp:index' %}">Home</a></li>
+					<li class="current"><a href="{% url 'pollsapp:index' %}">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="{% url 'login' %}">Login</a></li>
 				</ul>
-			</nav>
-			
+			</nav>			
 		</div>
 	</header>
 	{% block content%}{% endblock %}
